@@ -113,6 +113,7 @@
   background: #e6e6e6;
   height: 99px;
   box-shadow: inset -2px -2px 0px 0px #b4b4b4, inset 2px 2px 0px 0px #ffffff;
+  margin-bottom: 140px; /*agregue esta linea para que se vea las 3 ultimas coincidencias de la busqueda */
 }
 
 .input {
@@ -127,4 +128,21 @@
   background: #f7c9f3;
   border: 1px solid #808080;
   box-shadow: inset -1px -1px 0px 0px #b4b4b4, inset 1px 1px 0px 0px #ffffff;
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nuevo_item {
+  margin-top: 9px;
+}
+
+.busqueda_sugerida {
+  background: #e6e6e6;
+  height: 160px;
+  box-shadow: inset -1px -1px 0px 0px #b4b4b4, inset 1px 1px 0px 0px #ffffff;
+  display: block;
 }
