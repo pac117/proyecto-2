@@ -167,6 +167,14 @@
   margin-top: 50px;
 }
 
-.cont_sugerencias{
-    display: flex;
+.cont_sugerencias {
+  display: flex;
+}
+
+/*DIV TENDENCIAS*/
+
+.cont_tendencias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
