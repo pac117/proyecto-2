@@ -145,4 +145,28 @@
   height: 160px;
   box-shadow: inset -1px -1px 0px 0px #b4b4b4, inset 1px 1px 0px 0px #ffffff;
   display: block;
+  margin-top: 20px;
+}
+
+/*DIV SUGERENCIAS*/
+
+.sugerencias {
+}
+
+.input_lineal {
+  height: 32px;
+  width: 100%;
+  background: #fffafe;
+  border: 1px solid #e6bbe2;
+  box-shadow: inset -2px -2px 0px 0px #e6dce4, inset 2px 2px 0px 0px #80687d;
+  font-family: ChakraPetch-Regular;
+  font-size: 14px;
+  padding: 5px;
+  color: #110038;
+  letter-spacing: 0;
+  margin-top: 50px;
+}
+
+.cont_sugerencias{
+    display: flex;
 }
