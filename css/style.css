@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#texto_blanco {
+  font-family: ChakraPetch-Regular;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0;
+}
+
+#gradient {
+  background-image: linear-gradient(
+    to left,
+    rgb(247, 201, 243),
+    rgb(65, 128, 246)
+  );
+  box-shadow: 0 1px 0 0 #110038;
+}
+
+/*header */
+
+.p_header {
+  margin-left: 20px;
+  margin-top: 3px;
+}
+
+.header_barra {
+  height: 23px;
+}
+
+/*contenedor */
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*logo */
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+
+.logo_img {
+  width: 100px;
+  height: 64px;
+}
+
+/*Clase boton seccion logo */
+
+.boton {
+  background-color: #f7c9f3;
+  width: 114px;
+  height: 36px;
+  border: 1px solid #110038;
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  box-shadow: inset -1px -1px 0px 0px #997d97, inset 1px 1px 0px 0px #ffffff;
+  margin-right: 20px;
+}
+
+.boton_desplegable {
+  background-color: #f7c9f3;
+  width: 131px;
+  height: 36px;
+  border: 1px solid #110038;
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  box-shadow: inset -1px -1px 0px 0px #997d97, inset 1px 1px 0px 0px #ffffff;
+  text-align: center;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.anchor {
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  color: #110038;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-decoration: none;
+  margin-right: 20px;
+}

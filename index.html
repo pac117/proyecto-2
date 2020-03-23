@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>gifOS</title>
 </head>
 
@@ -11,8 +12,8 @@
     <!--DIV HEADER-->
     <header>
         <div class="header_barra" id="gradient">
-            <h6 id="texto_blanco">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
-                de visitas: 12.765.803</h6>
+            <p class="p_header" id="texto_blanco">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+                de visitas: 12.765.803</p>
         </div>
     </header>
 
@@ -21,11 +22,14 @@
 
         <!--DIV LOGO-->
         <div class="logo">
-            <img src="img/gifOF_logo.png" alt="" class="logo_img">
+            <div class="logo_contenido">
+                <img src="img/gifOF_logo.png" alt="" class="logo_img">
+            </div>
+
             <div class="botones">
                 <button class="boton" id="" type="button">Crear gifOS</button>
-                <select name="cambio_css" id="">
-                    <option disable="" value=""></option>
+                <select name="cambio_css" id="" class="boton_desplegable">
+                    <option disable="" value="">Elegir Tema</option>
                     <option value="">Sailor Day</option>
                     <option value="">Sailor Night</option>
                 </select>
