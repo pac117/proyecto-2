@@ -144,14 +144,16 @@
   background: #e6e6e6;
   height: 160px;
   box-shadow: inset -1px -1px 0px 0px #b4b4b4, inset 1px 1px 0px 0px #ffffff;
-  display: block;
+  display: none;
   margin-top: 20px;
 }
 
 /*DIV SUGERENCIAS*/
 
+/*
 .sugerencias {
 }
+*/
 
 .input_lineal {
   height: 32px;

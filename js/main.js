@@ -142,3 +142,10 @@ function sugerencias() {
     console.log(query);
   }
 }
+
+
+
+function cambiarArchivoCss(archivo) {
+    document.getElementById(day).href=archivo;
+    document.getElementById(dark).href=archivo;
+    }
