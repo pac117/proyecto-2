@@ -40,6 +40,15 @@
 }
 
 /*logo */
+#logo_day{
+  display: block;
+}
+
+
+#logo_dark{
+  display: none;
+}
+
 
 .logo {
   display: flex;

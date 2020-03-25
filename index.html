@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" id="day" href="css/style.css">
-    <link rel="stylesheet" id="dark" href="css/style_dark.css">
+    <link rel="stylesheet" id="styles" type="text/css" href="css/style.css">
+
     <title>gifOS</title>
 </head>
 
@@ -24,15 +24,16 @@
         <!--DIV LOGO-->
         <div class="logo">
             <div class="logo_contenido">
-                <img src="img/gifOF_logo.png" alt="" class="logo_img">
+                <img src="img/gifOF_logo.png" alt="" id="logo_day" class="logo_img">
+                <img src="img/gifOF_logo_dark.png" alt="" id="logo_dark" class="logo_img">
             </div>
 
             <div class="botones">
                 <button class="boton" id="" type="button">Crear gifOS</button>
-                <select name="cambio_css" id="" class="boton_desplegable">
-                    <option disable="" value="">Elegir Tema</option>
-                    <option value="1">Sailor Day</option>
-                    <option value="2">Sailor Night</option>
+                <select name="cambio_css" id="cambio_css" class="boton_desplegable">
+                    <option value="">Elegir Tema</option>
+                    <option value="true">Sailor Day</option>
+                    <option value="false">Sailor Night</option>
                 </select>
                 <a class="anchor" href="">Mis Guifos</a>
             </div>
@@ -59,7 +60,7 @@
         </div>
         <!-- DIV CONTENIDO DE BUSQUEDA POR FUERA DEL DIV BUSCAR  -->
         <div class="contenido" id="contenido">
-            
+
         </div>
 
 

@@ -18,11 +18,9 @@ entradaDatos.addEventListener("click", function(e) {
   mostrar();
 });
 
-
 busqueda_tendencias();
 
 sugerencias();
-
 
 //Funciones
 
@@ -130,7 +128,7 @@ function sugerencias() {
           
           <div class="nuevo_item"> 
            
-          <p>${title}</p>
+          <p class= "parrafo_surerencias">${title}</p>
           <img src=${url} width="288px" height="298px" alt="">
           <button class="ver_mas">Ver mas...</button>
           
@@ -143,9 +141,37 @@ function sugerencias() {
   }
 }
 
+////CAMBIO DE ESTILOS/////
+
+let cambio = document.getElementById("cambio_css");
+ //Listeners
+
+ cambio.addEventListener("change", function (e) {
+  e.preventDefault();
+  console.log("hiciste click");
+    
+  changeStyles(GetSelectedValue);
+});
 
 
-function cambiarArchivoCss(archivo) {
-    document.getElementById(day).href=archivo;
-    document.getElementById(dark).href=archivo;
-    }
+
+var lightStyle = true;
+function changeStyles() {
+  if (lightStyle == 1) {
+      document.getElementById('styles').href = "css/style.css";
+      lightStyle = false;
+  }
+  else {
+      document.getElementById('styles').href = "css/style_dark.css";
+      lightStyle = true;
+  }
+
+}
+
+
+
+function GetSelectedValue() {
+  var e = document.getElementById("cambio_css");
+  var result = e.options[e.selectedIndex].value;
+  
+}
