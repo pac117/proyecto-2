@@ -194,7 +194,7 @@ body {
   display: flex;
 }
 
-
+/*contenido div sugerencias*/
 
 .parrafo_surerencias{
 margin: 0;
@@ -203,10 +203,41 @@ font-weight: bold;
 text-align: left;
 
 background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-
-
+width: 280px;
 }
 
+.ver_mar{
+  width: 81px;
+  height: 34px;
+  margin-top: -50px;
+  margin-left: 30px;
+}
+
+.cont_sugerencias{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nuevo_item{
+  display: flex;
+  flex-direction: column;
+}
+
+.parrafo_surerencias{
+  display: flex;
+  
+}
+
+.cont_parrafo{
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+}
+
+cont_item{
+  display: flex;
+  flex-direction: column;
+}
 
 
 

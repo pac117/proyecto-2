@@ -57,8 +57,7 @@ function crear(datos) {
     console.log(object);
 
     let url = object.images.fixed_width.url;
-    let width = object.images.fixed_width.width;
-    let height = object.images.fixed_height.height;
+    
 
     contenido.innerHTML += `
 
@@ -83,8 +82,7 @@ function busqueda_tendencias() {
         console.log(object);
 
         let url = object.images.fixed_width.url;
-        let width = object.images.fixed_width.width;
-        let height = object.images.fixed_height.height;
+        
 
         cont_tendencias.innerHTML += `
     
@@ -121,17 +119,20 @@ function sugerencias() {
 
           let url = object.images.fixed_width.url;
           let title = object.title;
-          let width = object.images.fixed_width.width;
-          let height = object.images.fixed_height.height;
+          
 
           cont_sugerencias.innerHTML += `
           
           <div class="nuevo_item"> 
-           
-          <p class= "parrafo_surerencias">${title}</p>
+          <div class="cont_parrafo">
+          <p class= "parrafo_surerencias">${title} </p>
+          <img src="img/close.svg" alt="" id="close" class="close"> 
+
+          </div>
+          <div class="cont_item">
           <img src=${url} width="288px" height="298px" alt="">
           <button class="ver_mas">Ver mas...</button>
-          
+          </div>
           </div>
     
          `;
