@@ -57,7 +57,6 @@ function crear(datos) {
     console.log(object);
 
     let url = object.images.fixed_width.url;
-    
 
     contenido.innerHTML += `
 
@@ -82,7 +81,6 @@ function busqueda_tendencias() {
         console.log(object);
 
         let url = object.images.fixed_width.url;
-        
 
         cont_tendencias.innerHTML += `
     
@@ -119,19 +117,17 @@ function sugerencias() {
 
           let url = object.images.fixed_width.url;
           let title = object.title;
-          
 
           cont_sugerencias.innerHTML += `
           
           <div class="nuevo_item"> 
           <div class="cont_parrafo">
           <p class= "parrafo_surerencias">${title} </p>
-          <img src="img/close.svg" alt="" id="close" class="close"> 
 
           </div>
           <div class="cont_item">
-          <img src=${url} width="288px" height="298px" alt="">
-          <button class="ver_mas">Ver mas...</button>
+          <img src=${url} width="280px" height="280px" alt="">
+          <button class="ver_mas" onclick = "busqueda(query)" >Ver mas...</button>
           </div>
           </div>
     
@@ -142,37 +138,33 @@ function sugerencias() {
   }
 }
 
-////CAMBIO DE ESTILOS/////
-
-let cambio = document.getElementById("cambio_css");
- //Listeners
-
- cambio.addEventListener("change", function (e) {
-  e.preventDefault();
-  console.log("hiciste click");
-    
-  changeStyles(GetSelectedValue);
-});
-
-
 
 var lightStyle = true;
-function changeStyles() {
-  if (lightStyle == 1) {
-      document.getElementById('styles').href = "css/style.css";
-      lightStyle = false;
-  }
-  else {
-      document.getElementById('styles').href = "css/style_dark.css";
-      lightStyle = true;
-  }
-
+function setDayStyles() {
+    document.getElementById('styles').href = "css/style.css";
+}
+function setDarkStyles() {
+    document.getElementById('styles').href = "css/style_dark.css";
 }
 
 
+function mostrar1() {
+    document.getElementById("contenedor_botones").style.display = "block";
+}
 
-function GetSelectedValue() {
-  var e = document.getElementById("cambio_css");
-  var result = e.options[e.selectedIndex].value;
-  
+function ocultar1() {
+    document.getElementById("contenedor_botones").style.display = "none";
+
+}
+
+function mostrar_ocultar1() {
+    let contenedor_botones = document.getElementById("contenedor_botones");
+    if (contenedor_botones.style.display == "none") {
+        mostrar1();
+        document.getElementById("btn_flecha").value = "ocultar1";
+    } else {
+        ocultar1();
+        document.getElementById("btn_flecha").value = "mostrar1";
+
+    }
 }

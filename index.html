@@ -28,16 +28,26 @@
                 <img src="img/gifOF_logo_dark.png" alt="" id="logo_dark" class="logo_img">
             </div>
 
+
+
             <div class="botones">
-                <button class="boton" id="" type="button">Crear gifOS</button>
-                <select name="cambio_css" id="cambio_css" class="boton_desplegable">
-                    <option value="">Elegir Tema</option>
-                    <option value="true">Sailor Day</option>
-                    <option value="false">Sailor Night</option>
-                </select>
-                <a class="anchor" href="">Mis Guifos</a>
+                <button type="button" class="boton" id="">Crear gifOS</button>
+
+                <div class="boton">
+                    <p class="p_btn">Elegir Tema</p>
+                </div>
+                <div class="boton_flecha" id="btn_flecha" onclick="mostrar_ocultar1()"><img src="img/dropdown.svg" class="img_flecha"
+                        alt=""></div>
+                <div class="contenedor_botones" id="contenedor_botones">
+                    <button onclick="setDayStyles()" class="btn_tema_day">Sailor Day</button>
+                    <button onclick="setDarkStyles()" class="btn_tema">Sailor Nigth</button>
+                </div>
+                <a class="anchor" href="" target="_blank">Mis Guifos</a>
+
             </div>
         </div>
+
+        
 
         <!--DIV BUSCAR  -->
         <div class="buscar">
@@ -50,7 +60,14 @@
                     </button>
                 </form>
                 <div class="busqueda_sugerida_padre">
-                    <div class="busqueda_sugerida" id="busqueda_sugerida"> </div>
+
+                    <div class="busqueda_sugerida" id="busqueda_sugerida">
+                        <div class="busqueda_sugerida_flex">
+                            <div class="sugerencia" id="sugerencia"></div>
+                            <div class="sugerencia" id="sugerencia"></div>
+                            <div class="sugerencia" id="sugerencia"></div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -91,6 +108,3 @@
 </body>
 
 </html>
-
-
-<img src="img/close.svg" alt="" id="close" class="close">
