@@ -60,13 +60,21 @@ body {
   height: 64px;
 }
 
+.logo_contenido {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  align-items: center;
+}
+
 /*Clase boton seccion logo */
 
 .anchor {
   font-family: ChakraPetch-Regular;
   font-size: 16px;
-  color: #110038;
-  line-height: 18px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 34px;
   letter-spacing: 0;
   text-decoration: none;
   margin-right: 20px;
@@ -74,10 +82,31 @@ body {
 
 /*Clase boton cambiar tema*/
 
+.a_crear {
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  color: #110038;
+  line-height: 34px;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 20px;
+  background-color: #ee3efe;
+  width: 140px;
+  height: 36px;
+  border: 1px solid #110038;
+  font-family: ChakraPetch-Regular;
+  font-size: 16px;
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+
+
+
 .botones {
   display: flex;
-  justify-content: center; // align horizontal
-  align-items: center; //align vertical
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor_botones {
@@ -91,10 +120,9 @@ body {
   align-items: center;
 
   position: absolute;
-  margin-top: 35px;
-  margin-left: 72px;
+  margin-top: 135px;
+  margin-left: 71px;
   display: none;
-  transition: 5s;
 }
 
 .btn_tema {
@@ -130,7 +158,7 @@ body {
 
 .boton {
   margin-left: 20px;
-  width: 134px;
+  width: 140px;
   height: 36px;
   border: 1px solid #110038;
   font-family: ChakraPetch-Regular;
@@ -269,7 +297,7 @@ body {
 
 /*contenido div sugerencias*/
 
-p::before {
+.cont_parrafo > p::before {
   content: " # ";
   margin-left: 2px;
 }

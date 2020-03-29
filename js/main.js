@@ -5,6 +5,7 @@ var contenido = document.querySelector("#contenido");
 //Listeners
 
 buscarFormulario.addEventListener("submit", function(e) {
+  console.log('listener de submit');
   e.preventDefault();
   let query = entradaDatos.value;
   console.log("resultado de la busqueda" + query);
@@ -13,23 +14,29 @@ buscarFormulario.addEventListener("submit", function(e) {
 });
 
 entradaDatos.addEventListener("click", function(e) {
+  console.log('listener de click');
   e.preventDefault();
   console.log("hiciste click");
   mostrar();
 });
 
 busqueda_tendencias();
-
+ocultar();
 sugerencias();
+
+
 
 //Funciones
 
 function mostrar() {
   document.getElementById("busqueda_sugerida").style.display = "block";
+   document.getElementById("btn-buscar").style.background = "#F7C9F3"; /* para bloquear el boton buscar antes de escribir  */
 }
 
 function ocultar() {
   document.getElementById("busqueda_sugerida").style.display = "none";
+  document.getElementById("btn-buscar").style.display = "disabled"; /* para bloquear el boton buscar antes de escribir  */
+  document.getElementById("btn-buscar").style.background = "#E6E6E6"; /* para bloquear el boton buscar antes de escribir  */
 }
 
 function busqueda(query) {
@@ -138,33 +145,31 @@ function sugerencias() {
   }
 }
 
-
 var lightStyle = true;
 function setDayStyles() {
-    document.getElementById('styles').href = "css/style.css";
+  document.getElementById("styles").href = "css/style.css";
+  ocultar1();
 }
 function setDarkStyles() {
-    document.getElementById('styles').href = "css/style_dark.css";
+  document.getElementById("styles").href = "css/style_dark.css";
+  ocultar1();
 }
 
-
 function mostrar1() {
-    document.getElementById("contenedor_botones").style.display = "block";
+  document.getElementById("contenedor_botones").style.display = "block";
 }
 
 function ocultar1() {
-    document.getElementById("contenedor_botones").style.display = "none";
-
+  document.getElementById("contenedor_botones").style.display = "none";
 }
 
 function mostrar_ocultar1() {
-    let contenedor_botones = document.getElementById("contenedor_botones");
-    if (contenedor_botones.style.display == "none") {
-        mostrar1();
-        document.getElementById("btn_flecha").value = "ocultar1";
-    } else {
-        ocultar1();
-        document.getElementById("btn_flecha").value = "mostrar1";
-
-    }
+  let contenedor_botones = document.getElementById("contenedor_botones");
+  if (contenedor_botones.style.display == "none") {
+    mostrar1();
+    document.getElementById("btn_flecha").value = "ocultar1";
+  } else {
+    ocultar1();
+    document.getElementById("btn_flecha").value = "mostrar1";
+  }
 }
