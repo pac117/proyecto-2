@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>API de Acceso a la Camara y Micrófono (getUserMedia)</title>
+
+	<style>
+
+		h1 { text-align: center; }
+
+
+
+		video {
+
+			display: block;
+
+			height: 720px;
+
+			width: 1080px;
+
+			margin: auto;
+
+			background-color: #000;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>API de Acceso a la Camara y Micrófono (getUserMedia)</h1>
+
+	<video id="video"></video>
+
+	<script>
+
+		var video = document.querySelector('#video')
+
+
+
+		navigator.webcam = (
+
+			navigator.msGetUserMedia ||
+
+			navigator.mozGetUserMedia ||
+
+			navigator.webkitGetUserMedia ||
+
+			navigator.getUserMedia
+
+		)
+
+
+
+		function success(stream) {
+
+			video.src = window.URL.createObjectURL(stream)
+
+			video.play()
+
+		}
+
+
+
+		function error(error) {
+
+			alert('Sucedió un error al acceder a la webcam :(')
+
+			console.log(error)
+
+		}
+
+
+
+		navigator.webcam({video:true,audio:false}, success, error)
+
+	</script>
+
+</body>
+
+</html>

@@ -29,12 +29,12 @@
                 <img src="img/gifOF_logo.png" alt="" id="logo_day" class="logo_img">
                 <img src="img/gifOF_logo_dark.png" alt="" id="logo_dark" class="logo_img">
             </div>
-
-
+        </div>
+        <!--
 
             <div class="botones">
                 <a href="gifos.html" class="a_crear">Crear gifOS</a>
-
+               
                 <div class="boton">
                     <p class="p_btn">Elegir Tema</p>
                 </div>
@@ -49,12 +49,100 @@
                 </a>
 
             </div>
-
-
-            <div class="gifos">
+        </div>
+-->
+        <div class="cont_gifos">
+            <div class="gifos" id="gifos">
                 <div class="crear_gifos_cont">
                     <div class="titulo_gifo" id="gradient">
+                        <p class="p_gifo">Crear Guifos</p>
+
+
                         <div class="contenido_gifo">
+                            <img src="img/window img.png" alt="">
+                            <h2>Aquí podrás crear tus propios guifos</h2>
+
+
+                        </div>
+                        <div class="parrafo_crear1">
+                            <p class="parrafo_c">
+                                Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                                personalizados. Los pasos para crear tu guifo son:<br>
+
+                                1) Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br>
+                                2) Capturar tu momento guifo
+                                <br />
+                                3) Revisar el momento
+                                <br />
+                                4) Listo para subir y compartir!
+                                <br />
+                                ¿Quieres comenzar a crear tu guifo ahora?
+                                <br />
+                            </p>
+                        </div>
+                        <div class="cont_botones_crear">
+                            <div class="btn_crear_cancelar">
+                                <a href="" class="p_crear">Cancelar</a>
+                            </div>
+                            <div class="btn_crear_comenzar" id="btn_comenzar">
+                                <a href="" class="p_crear">Comenzar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="capturar" id="capturar">
+                <div class="capturar_contenedor">
+
+                    <div class="titulo_gifo" id="gradient">
+                        <p class="p_gifo">Un Chequeo Antes de Empezar</p>
+
+                        <div class="flex_pantalla">
+                            <video class="pantalla" id="recording" autoplay></video>
+
+                        </div>
+                        <div class="contenedor_btn_capturar">
+                            <div class="boton_capturar_icono" id="" onclick=""><img src="img/camera.svg"
+                                    class="img_camara" alt=""></div>
+                            
+
+                            <div class="boton_capturar" id="boton_capturar" >
+                                <p class="p_btn">Capturar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="capturando" id="uploadedGIF">
+                <div class="capturar_contenedor">
+
+                    <div class="titulo_gifo" id="gradient">
+                        <p class="p_gifo">Capturando Tu Guifo</p>
+
+                        <div class="flex_pantalla">
+                            <video class="pantalla" id="recording"></video>
+
+                        </div>
+                        <div class="contenedor_btn_capturar">
+
+                            <div class="cont_timer">
+
+                            </div>
+
+                            <div class="boton_capturar_icono_rec" id="" onclick=""><img src="img/recording.svg"
+                                    class="img_rec" alt=""></div>
+
+                                           
+                            <div class="boton_capturar_capturando">
+                                <button id="recordButton" onclick="captureGIF()">Grabar</button> 
+                               <!-- <p class="p_btn">Elegir Tema</p> -->
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -62,31 +150,14 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <!--SCRIPT-->
+            <SCRipt src="js/gifos.js"></SCRipt>
+            <!--CIERRE DIV CONTENEDOR  -->
 
 
         </div>
-
-        <!--SCRIPT-->
-        <SCRipt src="js/main.js"></SCRipt>
-        <!--CIERRE DIV CONTENEDOR  -->
     </div>
-
-
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 </body>
 
 </html>
