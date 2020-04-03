@@ -1,44 +1,43 @@
 let comenzar_btn = document.getElementById("btn_comenzar");
 let capturar_btn = document.getElementById("boton_capturar");
 let capturar_gifo = document.getElementById("recordButton");
-/*let video = document.querySelector('#pantalla');*/
+let btn_repetir = document.getElementById("btn_rep");
+
 
 //listeners
 
-//  Aquí podrás crear tus propios guifos
+//  Aquí podrás crear tus propios guifos 1
 comenzar_btn.addEventListener("click", () => {
+  console.log("click");
   document.getElementById("gifos").style.display = "none";
   document.getElementById("capturar").style.display = "block";
 
- 
-  navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: false
-})
-.then(stream => video.srcObject = stream)
-.catch(console.error);
+  navigator.mediaDevices
+    .getUserMedia({
+      video: true,
+      audio: false
+    })
+    .then(stream => (video.srcObject = stream))
+    .catch(console.error);
 });
-  
 
-// Un Chequeo Antes de Empezar
+// Un Chequeo Antes de Empezar 2
 capturar_btn.addEventListener("click", () => {
   document.getElementById("capturar").style.display = "none";
-  document.getElementById("uploadedGIF").style.display = "block";
+  document.getElementById("capturando").style.display = "block";
 });
 
+// Capturando Tu Guifo 3
 
-// Capturando Tu Guifo
-capturar_gifo.addEventListener("click", () => {
-  document.getElementById("capturando").style.display = "none";
+
+
+
+
+// Boton repetir captura
+btn_repetir.addEventListener("click", () => {
   document.getElementById("uploadedGIF").style.display = "block";
+  document.getElementById("vista_previa").style.display = "none";
 });
-
-
-
-
-
-
-
 
 
 
@@ -66,8 +65,8 @@ async function startRecord() {
     video: true
   });
   //----------------FIN PASO 1---------------------------------
-  /*video.style.display = 'block';*/
-  /*preview.style.display = 'none';*/
+  video.style.display = 'block';
+  preview.style.display = 'none';
   //----------------PASO 2---------------------------------
   recorder = new RecordRTCPromisesHandler(stream, {
     type: "gif",
@@ -88,6 +87,10 @@ async function stopRecording() {
   recorder.stopRecording();
   recording = false;
   video.pause();
+
+ // document.getElementById("uploadedGIF").style.display = "none";
+ // document.getElementById("vista_previa").style.display = "block";
+
   //----------------PASO 3---------------------------------
   let blob = await recorder.getBlob();
   recorder.destroy();
