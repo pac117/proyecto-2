@@ -30,27 +30,8 @@
                 <img src="img/gifOF_logo_dark.png" alt="" id="logo_dark" class="logo_img">
             </div>
         </div>
-        <!--
 
-            <div class="botones">
-                <a href="gifos.html" class="a_crear">Crear gifOS</a>
-               
-                <div class="boton">
-                    <p class="p_btn">Elegir Tema</p>
-                </div>
-                <div class="boton_flecha" id="btn_flecha" onclick="mostrar_ocultar1()"><img src="img/dropdown.svg"
-                        class="img_flecha" alt=""></div>
-                <div class="contenedor_botones" id="contenedor_botones">
-                    <button onclick="setDayStyles()" class="btn_tema_day">Sailor Day</button>
-                    <button onclick="setDarkStyles()" class="btn_tema">Sailor Nigth</button>
-                </div>
-                <a class="anchor" href="" target="_blank">
-                    <p> Mis Guifos </p>
-                </a>
-
-            </div>
-        </div>
--->
+        <!--DIV GIFOS "Aquí podrás crear tus propios guifos"-->
         <div class="cont_gifos">
             <div class="gifos" id="gifos">
                 <div class="crear_gifos_cont">
@@ -82,17 +63,18 @@
                         </div>
                         <div class="cont_botones_crear">
                             <div class="btn_crear_cancelar">
-                                <a href="" class="p_crear">Cancelar</a>
+                                <a href="#" class="p_crear">Cancelar</a>
                             </div>
                             <div class="btn_crear_comenzar" id="btn_comenzar">
-                                <a href="" class="p_crear">Comenzar</a>
+                                <a href="#" class="p_crear">Comenzar</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <!--DIV CAPTURAR "Un Chequeo Antes de Empezar"-->
+        <div class="cont_gifos">
             <div class="capturar" id="capturar">
                 <div class="capturar_contenedor">
 
@@ -106,18 +88,18 @@
                         <div class="contenedor_btn_capturar">
                             <div class="boton_capturar_icono" id="" onclick=""><img src="img/camera.svg"
                                     class="img_camara" alt=""></div>
-                            
-
-                            <div class="boton_capturar" id="boton_capturar" >
+                            <!--<div class="boton_capturar" id="boton_capturar" ></div>-->
+                            <div class="boton_capturar" id="boton_capturar" onclick="startRecord()">
                                 <p class="p_btn">Capturar</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <div class="capturando" id="uploadedGIF">
+        </div>
+        <!--DIV CAPTURARANDO "Capturando Tu Guifo"-->
+        <div class="cont_gifos">
+            <div class="capturando" id="capturando">
                 <div class="capturar_contenedor">
 
                     <div class="titulo_gifo" id="gradient">
@@ -125,21 +107,15 @@
 
                         <div class="flex_pantalla">
                             <video class="pantalla" id="recording"></video>
-
                         </div>
                         <div class="contenedor_btn_capturar">
-
                             <div class="cont_timer">
-
                             </div>
-
                             <div class="boton_capturar_icono_rec" id="" onclick=""><img src="img/recording.svg"
                                     class="img_rec" alt=""></div>
-
-                                           
-                            <div class="boton_capturar_capturando">
-                                <button id="recordButton" onclick="captureGIF()">Grabar</button> 
-                               <!-- <p class="p_btn">Elegir Tema</p> -->
+                            <div>
+                                <button class="boton_capturar_capturando" id="recordButton"
+                                    onclick="stopRecording()">Listo</button>
                             </div>
 
 
@@ -147,15 +123,45 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <!--SCRIPT-->
-            <SCRipt src="js/gifos.js"></SCRipt>
-            <!--CIERRE DIV CONTENEDOR  -->
-
-
         </div>
+
+        <!--DIV CAPTURARANDO "Vista previa"-->
+        <div class="cont_gifos">
+            <div class="capturando" id="uploadedGIF">
+                <div class="capturar_contenedor">
+
+                    <div class="titulo_gifo" id="gradient">
+                        <p class="p_gifo">Vista previa</p>
+
+                        <div class="flex_pantalla">
+                            <video class="pantalla" id="recording" ></video>
+                        </div>
+                        <div class="contenedor_btn_capturar">
+                            <div class="cont_timer">
+                            </div>
+                            <div class="cont_botones_crear">
+                                <div class="btn_crear_cancelar">
+                                    <a href="" class="p_crear" id="btn_rep">Repetir Captura</a>
+                                </div>
+                                <div class="btn_crear_comenzar" id="btn_comenzar">
+                                    <a href="" class="p_crear" id="btn_subir">Subir Gifo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--SCRIPT-->
+        <SCRipt src="js/gifos.js"></SCRipt>
+        <!--CIERRE DIV CONTENEDOR  -->
+
+
+
     </div>
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 </body>

@@ -24,15 +24,9 @@ comenzar_btn.addEventListener("click", () => {
 capturar_btn.addEventListener("click", () => {
   document.getElementById("capturar").style.display = "none";
   document.getElementById("capturando").style.display = "block";
- 
 });
 
 // Capturando Tu Guifo 3
-
-
-
-
-
 
 // Boton repetir captura
 btn_repetir.addEventListener("click", () => {
@@ -77,7 +71,7 @@ async function startRecord() {
   });
   console.log(recording);
   recorder.startRecording();
-  recording = true; //el FLAG cambia a true para indicar que se esta grabando.
+  //recording = true; //el FLAG cambia a true para indicar que se esta grabando.
   //document.getElementById("recordButton").innerHTML = "Detener";
   video.srcObject = stream;
   video.play();
